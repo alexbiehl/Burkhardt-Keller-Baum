@@ -1,4 +1,4 @@
 Burkhardt-Keller-Baum
 =====================
 
-Example implementation of a BKTree
+Sample implementation of a BKTree
