@@ -49,13 +49,8 @@ public class BKTreeTest {
 	
 	static Set<String> testBKTree(Levenstein1 ms, String term, int radius) {
 
+		BKTree<String> bktree = BKTree.mkBKTree(ms, TERMS);
 		
-		BKTree<String> bktree = new BKTree<String>(ms);
-		
-		for (String s : TERMS) {
-			bktree.put(s);
-		}
-
 		ms.resetN();
 		
 		long start = System.nanoTime();

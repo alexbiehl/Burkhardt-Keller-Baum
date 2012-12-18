@@ -1,4 +1,5 @@
 package ab.bktree;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -11,6 +12,18 @@ public class BKTree<T> {
 	
 	private Node<T> root;
 
+	public static <E> BKTree<E> mkBKTree(MetricSpace<E> ms, Collection<E> elems) {
+		
+		BKTree<E> bkTree = new BKTree<E>(ms);
+		
+		for (E elem : elems) {
+			bkTree.put(elem);
+		}
+		
+		return bkTree;
+	}
+	
+	
 	public BKTree(MetricSpace<T> metricSpace) {
 		this.metricSpace = metricSpace;
 	}
